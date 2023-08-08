@@ -14,8 +14,8 @@ public class Client {
     @GenericGenerator(name = "native", strategy = "native")
     private Long id;
     private String dni;
-    private String name;
-    private String lastname;
+    private String firstName;
+    private String lastName;
 
     private String email;
 
@@ -26,10 +26,10 @@ public class Client {
         return id;
     }
 
-    public Client(String dni, String name, String lastname, String email) {
+    public Client(String dni, String firstName, String lastName, String email) {
         this.dni = dni;
-        this.name = name;
-        this.lastname = lastname;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
     }
 
@@ -41,20 +41,20 @@ public class Client {
         this.dni = dni;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String first) {
+        this.firstName = first;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public void setLastName(String last) {
+        this.lastName = last;
     }
 
     public String getEmail() {

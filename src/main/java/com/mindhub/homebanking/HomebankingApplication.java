@@ -16,13 +16,13 @@ public class HomebankingApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HomebankingApplication.class, args);
 	}
-   @Bean
+   /*@Bean
 	public CommandLineRunner initData(ClientRepository clientRepository){
 		return (args) -> {
-			Client client = new Client("33222111", "Marcos", "Maciel","marcos@gmail.com");
+			Client client = new Client("33222111", "Marcos", "Maciel", "marcos@gmail.com");
 
 			clientRepository.save(client);
 		};
-   }
+   }*/
 }
 
