@@ -75,6 +75,7 @@ public class Client {
     public void setAccounts(Set<Account> accounts) {
         this.accounts = accounts;
     }
+
     public void addAccount(Account account) {
         account.setHolder(this);
         accounts.add(account);
