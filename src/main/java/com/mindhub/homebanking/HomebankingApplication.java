@@ -20,7 +20,7 @@ public class HomebankingApplication {
 		SpringApplication.run(HomebankingApplication.class, args);
 	}
    @Bean
-	public CommandLineRunner initData(ClientRepository clientRepository, AccountRepository accountRepository, TransactionRepository transactionRepository, LoanRepository loanRepository, CliantLoanRepository cliantLoanRepository){
+	public CommandLineRunner initData(ClientRepository clientRepository, AccountRepository accountRepository, TransactionRepository transactionRepository, LoanRepository loanRepository, ClientLoanRepository clientLoanRepository){
 		return (args) -> {
 			Client client1 = new Client("33222111", "Melba", "Morel", "melba@gmail.com");
 			clientRepository.save(client1);
@@ -74,16 +74,16 @@ public class HomebankingApplication {
 			loanRepository.save(loan3);
 
 			ClientLoan clientLoan1 = new ClientLoan (60, 400000.0, client1,loan1);
-			cliantLoanRepository.save(clientLoan1);
+			clientLoanRepository.save(clientLoan1);
 
 			ClientLoan clientLoan2 = new ClientLoan (12, 50000.0, client1, loan2);
-			cliantLoanRepository.save(clientLoan2);
+			clientLoanRepository.save(clientLoan2);
 
 			ClientLoan clientLoan3 = new ClientLoan (24, 100000.0, client2, loan2);
-			cliantLoanRepository.save(clientLoan3);
+			clientLoanRepository.save(clientLoan3);
 
 			ClientLoan clientLoan4 = new ClientLoan (36, 200000.0, client2, loan3);
-			cliantLoanRepository.save(clientLoan4);
+			clientLoanRepository.save(clientLoan4);
 		};
    }
 
